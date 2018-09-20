@@ -1,0 +1,51 @@
+{
+  "name": "sparkle.css",
+  "description": "Simple CSS framework coded in CSS and jQuery",
+  "main": [
+    "dist/css/sparkle.css",
+    "dist/css/sparkle.min.css"
+  ],
+  "authors": [
+    "J. Djimitry Riviere <tilithar@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "css3",
+    "html",
+    "html5",
+    "js",
+    "javascript",
+    "sparkle",
+    "sparkle.css",
+    "sparkle-css"
+  ],
+  "homepage": "https://jdriviere.github.io/sparkle-css",
+  "ignore": [
+    "**/.*",
+    ".git/",
+    ".sass-cache/",
+    ".vscode/",
+    "dev/",
+    "dist/img",
+    "dist/css/main.css",
+    "node_modules/",
+    "bower_components/",
+    "src/",
+    "unused/",
+    "*.html",
+    "*.json",
+    "*.log"
+  ],
+  "version": "1.9.13",
+  "_release": "1.9.13",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.9.13",
+    "commit": "c4bcd672dd34ffbcc06b0fead47a62a31a4b0619"
+  },
+  "_source": "https://github.com/jdriviere/sparkle-css.git",
+  "_target": "^1.9.13",
+  "_originalSource": "sparkle-css",
+  "_direct": true
+}

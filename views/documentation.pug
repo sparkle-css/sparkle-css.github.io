@@ -1,0 +1,85 @@
+extends ./config/base
+
+block style
+  link(rel="icon", type="image/png", sizes="16x16", href="images/icon.png")
+  //- link(rel="stylesheet", type="text/css" href="stylesheets/bower_components/sparkle.css/dist/css/sparkle.min.css")
+  link(rel="stylesheet", type="text/css", href="https://cdn.jsdelivr.net/gh/jdriviere/sparkle-css@1.9.14/dist/css/sparkle.min.css")
+  link(rel="stylesheet", type="text/css", href="stylesheets/main.css")
+
+block content
+  //- Variables
+  -var version = 'v1.9.14';
+  -var docVersion = 'v0.1.0';
+
+  //- Contents
+  header
+    nav.nav.make-fixed
+      input(type="checkbox")#nav__trigger
+      label.nav__toggle(for="nav__trigger")
+      .nav__brand
+        img(src="images/icon.png", alt="Sparkle.CSS logo")
+      ul.nav__menu
+        li.nav__menu__item
+          a(href="/") Home
+        li.nav__menu__item
+          a(href="/get-started") Get Started
+        li.nav__menu__item.make-active
+          a(href="/documentation") Documentation
+      ul.nav__menu.make-right
+        li.nav__menu__item.make-tablet-hidden
+          a(href="").button.make-dark.make-outline.make-block Download
+        li.nav__menu__item.make-tablet-hidden
+          a(href="").button.make-primary.make-block Github
+        li.nav__menu__item.make-phone-hidden
+          a(href="")
+            i.fa.fa-download
+        li.nav__menu__item.make-phone-hidden
+          a(href="")
+            i.fa.fa-github
+
+  main
+    //- HERO
+    .hero.make-large.make-bg-image
+      .hero__body
+        .wrapper
+          .grid
+            .column.make-half
+              h1 Documentation
+              h3 Navigate through the various elements that make up the framework, and get the information you need.
+          .tags.make-solid.make-margin-20-top
+            span.tag.make-dark= title
+            span.tag.make-primary= docVersion
+  
+    //- SELECTION
+    .project
+      .wrapper.make-padding-50-vertical
+        .make-text-centered.make-margin-30-bottom
+          h3 Learn to Build with Sparkle
+        .grid.make-gutters
+          .column
+            .box.make-text-centered
+              a(href="/documentation/components")
+                i.fa.fa-cube.fa-3x
+                p.make-text-size3.make-text-bold Components
+              p.make-text-size5.make-text-normal The building blocks of the framework.
+          .column
+            .box.make-text-centered
+              a(href="/documentation/forms")
+                i.fa.fa-list.fa-3x
+                p.make-text-size3.make-text-bold Forms
+              p.make-text-size5.make-text-normal The elements essential to style a clean form UI.
+          .column
+            .box.make-text-centered
+              a(href="/documentation/layouts")
+                i.fa.fa-object-group.fa-3x
+                p.make-text-size3.make-text-bold Layouts
+              p.make-text-size5.make-text-normal The overall structural flow of the page.
+          .column
+            .box.make-text-centered
+              a(href="/documentation/utilities")
+                i.fa.fa-cogs.fa-3x
+                p.make-text-size3.make-text-bold Utilities
+              p.make-text-size5.make-text-normal The additional functionalities for optimum designs.
+
+  //- FOOTER
+  include ./layouts/footer

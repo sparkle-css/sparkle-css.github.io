@@ -1,0 +1,7 @@
+# FOLDERS
+node_modules/
+
+# FILES
+*.log
+*.txt
+

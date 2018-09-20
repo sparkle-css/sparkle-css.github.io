@@ -1,0 +1,93 @@
+extends ./config/base
+
+block style
+  link(rel="icon" type="image/png" sizes="16x16" href="images/icon.png")
+  //- link(rel="stylesheet", type="text/css" href="stylesheets/bower_components/sparkle.css/dist/css/sparkle.min.css")
+  link(rel="stylesheet", type="text/css" href="https://cdn.jsdelivr.net/gh/jdriviere/sparkle-css@1.9.14/dist/css/sparkle.min.css")
+  link(rel="stylesheet", type="text/css" href="stylesheets/main.css")
+
+block content
+  //- Variables
+  -var subtitle = "A lightweight, open-source, mobile-first CSS framework for easy website designs."
+  -var version = "1.9.14";
+  -var spk_link = "https://jdriviere.github.io/sparkle-css";
+
+  //-- COMPUTING STARTS HERE --//
+  //- MAIN
+  main
+    //- HERO
+    .make-bg-image
+      .hero.make-medium
+        //- BODY
+        .hero__body
+          .wrapper
+            .grid
+              .column.make-half
+                //- TITLE
+                h1.make-text-primary= title
+                h3.make-text-subtitle= subtitle
+
+            //- CALL TO ACTION (DESKTOP)
+            .buttons.make-margin-20-vertical.make-phone-hidden
+              a(href=`https://github.com/jdriviere/sparkle-css/archive/v"${version}.zip`).button.make-dark.make-outline.make-large
+                i.fa.fa-download
+                span Download
+              a(href="./get-started").button.make-primary.make-large
+                i.fa.fa-book
+                span Get Started
+          
+            //- CALL TO ACTION (MOBILE)
+            .buttons.make-margin-20-vertical.make-tablet-hidden
+              a(href="https://github.com/jdriviere/sparkle-css/archive/v" + version + ".zip").button.make-dark.make-outline.make-block
+                i.fa.fa-download
+                span.make-text-bold Download
+              a(href="./get-started").button.make-primary.make-block.make-margin-10-top
+                i.fa.fa-book
+                span.make-text-bold Get Started
+        //- FOOTER
+        .hero__footer
+          //- VERSIONING
+          .wrapper.make-padding-30-vertical
+            p.make-text-bold.make-text-size6.
+              *Currently on version
+              <span class="tag make-dark">#{version}</span>
+
+    //- WHY SPARKLE?
+    .project
+      .wrapper.make-padding-50-vertical
+        .make-text-centered.make-margin-30-bottom
+          h3 Why Sparkle?
+        .grid.make-gutters
+          .column.make-text-centered
+            .box
+              img(src="https://png.icons8.com/ultraviolet/100/add2e6/media-queries.png", alt="Sparkle mobile-first icon")
+              p.make-text-subtitle Responsive
+              p.
+                Sparkle is a responsive framework that uses the <span class="make-text-bold">mobile-first</span>
+                approach, which ensures proper mobile view compatibility.
+          .column.make-text-centered
+            .box
+              img(src="https://png.icons8.com/ultraviolet/80/add2e6/module.png", alt="Sparkle module icon")
+              p.make-text-subtitle Modular
+              p.
+                Sparkle offers you the possibility to only import the elements you need.
+                Simply comment out what you do not wish to render, then run the provided
+                <code>gulp</code> command!
+          .column.make-text-centered
+            .box
+              img(src="https://png.icons8.com/ultraviolet/80/add2e6/user-male.png", alt="Sparkle module icon")
+              p.make-text-subtitle User-Friendly
+              p.
+                Sparkle strives to remain as user-friendly as possible, using semantics that
+                can be easily remembered and used by anyone.
+          .column.make-text-centered
+            .box
+              img(src="https://png.icons8.com/ultraviolet/80/add2e6/repository.png", alt="Sparkle module icon")
+              p.make-text-subtitle Open-Source
+              p.
+                Most importantly, Sparkle is <span class="make-text-bold">free to use</span>! No fees, ever!
+                And because it is open-source, you are free to request more features and to contribute to the
+                improvement of the framework!
+
+  //- FOOTER
+  include ./layouts/footer.pug

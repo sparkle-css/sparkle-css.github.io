@@ -1,0 +1,107 @@
+extends ./config/base
+
+block style
+  link(rel="icon" type="image/png" sizes="16x16" href="images/icon.png")
+  //- link(rel="stylesheet", type="text/css" href="stylesheets/bower_components/sparkle.css/dist/css/sparkle.min.css")
+  link(rel="stylesheet", type="text/css" href="https://cdn.jsdelivr.net/gh/jdriviere/sparkle-css@1.9.14/dist/css/sparkle.min.css")
+  link(rel="stylesheet", type="text/css" href="stylesheets/main.css")
+  link(rel="stylesheet", type="text/css" href="stylesheets/sticker.css")
+
+block content
+  //- Variables
+  -var version = 'v1.9.14';
+  -var docVersion = 'v0.1.0';
+
+  //- Navbar
+  header
+    nav.nav.make-fixed
+      input(type="checkbox")#nav__trigger
+      label.nav__toggle(for="nav__trigger")
+      .nav__brand
+        img(src="images/icon.png", alt="Sparkle.CSS logo")
+      ul.nav__menu
+        li.nav__menu__item
+          a(href="/") Home
+        li.nav__menu__item.make-active
+          a(href="/get-started") Get Started
+        li.nav__menu__item
+          a(href="/documentation") Documentation
+      ul.nav__menu.make-right
+        li.nav__menu__item.make-tablet-hidden
+          a(href="").button.make-dark.make-outline.make-block Download
+        li.nav__menu__item.make-tablet-hidden
+          a(href="").button.make-primary.make-block Github
+        li.nav__menu__item.make-phone-hidden
+          a(href="")
+            i.fa.fa-download
+        li.nav__menu__item.make-phone-hidden
+          a(href="")
+            i.fa.fa-github
+  
+  //- MAIN
+  main
+    //- HERO
+    .hero.make-large.make-bg-image
+      .hero__body
+        .wrapper
+          .grid
+            .column.make-half
+              h1 Let's Get Started
+              h3 Get everything you need to get started with Sparkle!
+          .tags.make-solid.make-margin-20-top
+            span.tag.make-dark= title
+            span.tag.make-primary= docVersion
+        
+    //- INSTALLATION
+    .project
+      .wrapper.make-padding-50-vertical.make-margin-30-bottom
+        h2 Getting Started
+        p.
+          There are many ways to import Sparkle into your development folder,
+          each way being simple and easy to follow.
+      
+        //- INFO
+        .grid.make-gutters
+          .column.make-third
+            h5 Install via Bower
+            p.
+              This is the favorable way, if you wish to dig deep within
+              the developmental folders of Sparkle and completely
+              customize it. Just follow these steps:
+            ol
+              li.
+                Run the command <code>bower install sparkle.css</code> in your command line
+                (Windows) or terminal (Linux/OSX).
+                <br>
+                <strong>Note:</strong> It is important to know that Node.js and NPM must
+                be installed in your machine prior to installing Sparkle.
+              li.
+                Link the <code>.css</code> or <code>.min.css</code> files located
+                in the <code>bower_components</code> folder that is created upon running the
+                command.
+              li Enjoy!
+            .sticker
+              code bower install sparkle.css
+          .column.make-third
+            h5 Install via CDN
+            p.
+                        You can also install the latest (master) release of the framework.
+                        Simply link your stylesheet and script source to the appropriate links.
+                        <br>
+                        <strong>Note:</strong> If you wish to install the latest developmental
+                        version of Sparkle, just replace the version number with <code>@latest</code>.
+            .sticker
+              code= `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jdriviere/sparkle-css@${version}/dist/css/sparkle.min.css">`
+          .column.make-third
+            h5 Install via Git Repo
+            p.
+              You can alsways clone the repository into your local machine by typing
+              the code below in your command line (Windows) or terminal (Linux/OSX).
+              <br>
+              <strong>Note:</strong> This one is especially recommended, if you intend to
+              contribute to this project.
+            .sticker
+              code git clone https://github.com/jdriviere/sparkle-css.git
+
+  //- FOOTER
+  include ./layouts/footer

@@ -18,22 +18,22 @@ router.get('/documentation', function(req, res) {
 
 /* GET documentation's COMPONENTS page. */
 router.get('/documentation/components', function(req, res) {
-  res.render('components', { title: 'Components' });
+  res.render('components', { title: 'Components', subtitle: 'The building blocks of the framework.' });
 });
 
 /* GET documentation's LAYOUTS page. */
 router.get('/documentation/forms', function(req, res) {
-  res.render('forms', { title: 'Forms' });
+  res.render('forms', { title: 'Forms', subtitle: 'The elements essential to style a clean form UI.' });
 });
 
 /* GET documentation's LAYOUTS page. */
 router.get('/documentation/layouts', function(req, res) {
-  res.render('layouts', { title: 'Layouts' });
+  res.render('layouts', { title: 'Layouts', subtitle: 'The overall structural flow of the page.' });
 });
 
 /* GET documentation's UTILITIES page. */
 router.get('/documentation/utilities', function(req, res) {
-  res.render('utilities', { title: 'Utilities' });
+  res.render('utilities', { title: 'Utilities', subtitle: 'The additional functionalities for optimum designs.' });
 });
 
 module.exports = router;

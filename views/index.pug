@@ -8,11 +8,10 @@ block style
 
 block content
   //- Variables
-  -var subtitle = "A lightweight, open-source, mobile-first CSS framework for easy website designs."
   -var version = version;
   -var spk_link = "https://sparklecss.herokuapp.com";
 
-  //-- COMPUTING STARTS HERE --//
+  //- Contents
   //- MAIN
   main
     //- HERO
@@ -25,7 +24,7 @@ block content
               .column.make-half
                 //- TITLE
                 h1.make-text-primary= title
-                h3.make-text-subtitle= subtitle
+                h3.make-text-subtitle A lightweight, open-source, mobile-first CSS framework for easy website designs.
 
             //- CALL TO ACTION (DESKTOP)
             .buttons.make-margin-20-vertical.make-phone-hidden
@@ -52,7 +51,7 @@ block content
               *Currently on version
               <span class="tag make-dark">#{version}</span>
 
-    //- WHY SPARKLE?
+    //- PROJECT
     .project
       .wrapper.make-padding-50-vertical
         .make-text-centered.make-margin-30-bottom

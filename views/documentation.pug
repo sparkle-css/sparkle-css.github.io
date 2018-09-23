@@ -12,6 +12,7 @@ block content
   -var docVersion = 'v0.1.0';
 
   //- Contents
+  //- NAV
   header
     nav.nav.make-fixed
       input(type="checkbox")#nav__trigger
@@ -27,16 +28,17 @@ block content
           a(href="/documentation") Documentation
       ul.nav__menu.make-right
         li.nav__menu__item.make-tablet-hidden
-          a(href="").button.make-dark.make-outline.make-block Download
+          a(href=`https://github.com/jdriviere/sparkle-css/archive/v${version}.zip`).button.make-dark.make-outline.make-block Download
         li.nav__menu__item.make-tablet-hidden
-          a(href="").button.make-primary.make-block Github
+          a(href="https://github.com/jdriviere/sparkle-css", target="_blank").button.make-primary.make-block Github
         li.nav__menu__item.make-phone-hidden
-          a(href="")
+          a(href=`https://github.com/jdriviere/sparkle-css/archive/v${version}.zip`)
             i.fa.fa-download
         li.nav__menu__item.make-phone-hidden
-          a(href="")
+          a(href="https://github.com/jdriviere/sparkle-css", target="_blank")
             i.fa.fa-github
-
+  
+  //- MAIN
   main
     //- HERO
     .hero.make-large.make-bg-image
@@ -50,7 +52,7 @@ block content
             span.tag.make-dark= title
             span.tag.make-primary= docVersion
   
-    //- SELECTION
+    //- PROJECT
     .project
       .wrapper.make-padding-50-vertical
         .make-text-centered.make-margin-30-bottom

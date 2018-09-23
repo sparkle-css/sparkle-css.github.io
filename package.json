@@ -6,7 +6,7 @@
     "start": "node ./bin/www",
     "serve": "nodemon ./bin/www",
     "debug": "set DEBUG=sparkle.site:* & npm start",
-    "sass": "sass public/stylesheets/sticker.sass:public/stylesheets/sticker.css"
+    "sass": "sass public/stylesheets/*.sass:public/stylesheets/"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",

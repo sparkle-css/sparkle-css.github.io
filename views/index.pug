@@ -9,8 +9,8 @@ block style
 block content
   //- Variables
   -var subtitle = "A lightweight, open-source, mobile-first CSS framework for easy website designs."
-  -var version = "1.9.14";
-  -var spk_link = "https://jdriviere.github.io/sparkle-css";
+  -var version = version;
+  -var spk_link = "https://sparklecss.herokuapp.com";
 
   //-- COMPUTING STARTS HERE --//
   //- MAIN
@@ -29,7 +29,7 @@ block content
 
             //- CALL TO ACTION (DESKTOP)
             .buttons.make-margin-20-vertical.make-phone-hidden
-              a(href=`https://github.com/jdriviere/sparkle-css/archive/v"${version}.zip`).button.make-dark.make-outline.make-large
+              a(href=`https://github.com/jdriviere/sparkle-css/archive/v${version}.zip`).button.make-dark.make-outline.make-large
                 i.fa.fa-download
                 span Download
               a(href="./get-started").button.make-primary.make-large
@@ -38,7 +38,7 @@ block content
           
             //- CALL TO ACTION (MOBILE)
             .buttons.make-margin-20-vertical.make-tablet-hidden
-              a(href="https://github.com/jdriviere/sparkle-css/archive/v" + version + ".zip").button.make-dark.make-outline.make-block
+              a(href=`https://github.com/jdriviere/sparkle-css/archive/v${version}.zip`).button.make-dark.make-outline.make-block
                 i.fa.fa-download
                 span.make-text-bold Download
               a(href="./get-started").button.make-primary.make-block.make-margin-10-top

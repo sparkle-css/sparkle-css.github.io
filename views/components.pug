@@ -8,6 +8,7 @@ block style
   link(rel="mask-icon", href="../images/safari-pinned-tab.svg", color="#add2e6")
   link(rel="stylesheet", type="text/css" href="https://cdn.jsdelivr.net/gh/jdriviere/sparkle-css@1.9.14/dist/css/sparkle.min.css")
   link(rel="stylesheet", type="text/css" href="../stylesheets/main.css")
+  link(rel="stylesheet", type="text/css" href="../stylesheets/sticker.css")
 
 block content
   //- Variables
@@ -53,9 +54,278 @@ block content
             span.tag.make-dark= title
             span.tag.make-primary= docVersion
   
-    //- SELECTION
+    //- COMPONENTS
     .project
       .wrapper.make-padding-50-vertical.make-margin-30-bottom
+        //--- ALERTS ---//
+        h4 Alerts
+        p.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Ut maiores quia quasi ea vitae ullam sequi culpa voluptatum ipsam odio!
+        .grid.make-gutters
+          .column
+            .alert
+              p This is a <strong>default alert</strong>.
+          .column
+            .sticker
+              code.
+                &lt;div class="<strong>alert</strong>"&gt;<br>
+                &nbsp;&nbsp;// Body of element<br>
+                &lt;/div&gt;<br>
+        
+        //- TYPES
+        .grid.make-gutters
+          .column
+            .alert.make-primary
+              p This is a <strong>primary alert</strong>.
+            .alert.make-info
+              p <strong>Info:</strong> This is a <strong>info alert</strong>.
+            .alert.make-success
+              p <strong>Success:</strong> This is a <strong>success alert</strong>.
+            .alert.make-warning
+              p <strong>Warning:</strong> This is a <strong>warning alert</strong>.
+            .alert.make-danger
+              p <strong>Danger:</strong> This is a <strong>danger alert</strong>.
+            .alert.make-light
+              p This is a <strong>light alert</strong>.
+            .alert.make-dark
+              p This is a <strong>dark alert</strong>.
+          .column
+            .sticker
+              code.
+                &lt;div class="alert <strong>[make-$type]</strong>"&gt;<br>
+                &nbsp;&nbsp;// Body of element<br>
+                &lt;/div&gt;<br>
+      
+        //--- BLOCKQUOTES ---//
+        h4 Blockquotes
+        p.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Ut maiores quia quasi ea vitae ullam sequi culpa voluptatum ipsam odio!
+        .grid.make-gutters
+          .column
+            .blockquote
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, commodi?
+              .blockquote__footer Anonymous
+          .column
+            .sticker
+              code.
+                &lt;blockquote class="<strong>blockquote</strong>"&gt;<br>
+                &nbsp;&nbsp;// Body of element<br>
+                &nbsp;&nbsp;&lt;footer class="<strong>blockquote__footer</strong>"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;// Body of footer<br>
+                &nbsp;&nbsp;&lt;/footer&gt;<br>
+                &lt;/blockquote&gt;<br>
+      
+        //--- BUTTONS ---//
+        h4 Buttons
+        p.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Ut maiores quia quasi ea vitae ullam sequi culpa voluptatum ipsam odio!
+        .grid.make-gutters
+          .column
+            .buttons
+              .button Div
+              a(href="#").button Link
+              button.button Button
+          .column
+            .sticker
+              code.
+                &lt;a href="#" class="<strong>button</strong>"&gt;Button&lt;/a&gt;<br>
+                &lt;button class="<strong>button</strong>"&gt;Button&lt;/button&gt;<br>
+                &lt;div class="<strong>button</strong>"&gt;Button&lt;/div&gt;
+
+        //- TYPES
+        .grid.make-gutters
+          .column
+            .buttons
+              button.button.make-primary Primary
+              button.button.make-info Info
+              button.button.make-success Success
+              button.button.make-warning Warning
+              button.button.make-danger Danger
+              button.button.make-light Light
+              button.button.make-dark Dark
+          .column
+            .sticker
+              code.
+                &lt;button class="button <strong>make-$type</strong>"&gt;Button&lt;/button&gt;<br>
+
+        //- REVERSED      
+        .grid.make-gutters
+          .column
+            .buttons
+              button.button.make-primary.make-reverse Primary
+              button.button.make-info.make-reverse Info
+              button.button.make-success.make-reverse Success
+              button.button.make-warning.make-reverse Warning
+              button.button.make-danger.make-reverse Danger
+              button.button.make-light.make-reverse Light
+              button.button.make-dark.make-reverse Dark
+          .column
+            .sticker
+              code.
+                &lt;button class="button make-$type <strong>make-reverse</strong>"&gt;Button&lt;/button&gt;<br>
+ 
+        //- OUTLINED      
+        .grid.make-gutters
+          .column
+            .buttons
+              button.button.make-primary.make-outline Primary
+              button.button.make-info.make-outline Info
+              button.button.make-success.make-outline Success
+              button.button.make-warning.make-outline Warning
+              button.button.make-danger.make-outline Danger
+              button.button.make-light.make-outline Light
+              button.button.make-dark.make-outline Dark
+          .column
+            .sticker
+              code.
+                &lt;button class="button make-$type <strong>make-outline</strong>"&gt;Button&lt;/button&gt;<br>
+                
+        //- REVERSED OUTLINED      
+        .grid.make-gutters
+          .column
+            .buttons
+              button.button.make-primary.make-outline.make-reverse Primary
+              button.button.make-info.make-outline.make-reverse Info
+              button.button.make-success.make-outline.make-reverse Success
+              button.button.make-warning.make-outline.make-reverse Warning
+              button.button.make-danger.make-outline.make-reverse Danger
+              button.button.make-light.make-outline.make-reverse Light
+              button.button.make-dark.make-outline.make-reverse Dark
+          .column
+            .sticker
+              code.
+                &lt;button class="button make-$type <strong>make-outline make-reverse</strong>"&gt;Button&lt;/button&gt;<br>
+                
+        //- SIZES     
+        .grid.make-gutters
+          .column
+            .buttons
+              button.button.make-xsmall X-Small
+              button.button.make-small Small
+              button.button.make-medium Medium
+              button.button.make-large Large
+              button.button.make-xlarge X-Large
+          .column
+            .sticker
+              code.
+                &lt;button class="button <strong>make-$size</strong>"&gt;Button&lt;/button&gt;<br>
+                
+        //--- LOADERS ---//
+        h4 Loaders
+        p.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Ut maiores quia quasi ea vitae ullam sequi culpa voluptatum ipsam odio!
+        .grid.make-gutters
+          .column
+            .button.make-dark
+              .loader
+          .column
+            .sticker
+              code.
+                &lt;div class="<strong>loader</strong>"&gt;&lt;/div&gt;
+      
+        //- TYPES
+        .grid.make-gutters
+          .column
+            .buttons
+              .button.make-dark
+                .loader.make-primary
+              .button
+                .loader.make-info
+              .button
+                .loader.make-success
+              .button.make-dark
+                .loader.make-warning
+              .button
+                .loader.make-danger
+              .button.make-dark
+                .loader.make-light
+              .button
+                .loader.make-dark
+          .column
+            .sticker
+              code.
+                &lt;div class="loader <strong>make-$type</strong>"&gt;&lt;/div&gt;
+      
+        //- SIZES
+        .grid.make-gutters
+          .column
+            .buttons
+              .button.make-dark
+                .loader
+              .button.make-dark
+                .loader.make-large
+              .button.make-dark
+                .loader.make-xlarge
+          .column
+            .sticker
+              code.
+                &lt;div class="loader make-$type <strong>make-$size</strong>"&gt;&lt;/div&gt;
+
+        //--- TAGS ---//
+        h4 Tags
+        p.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Ut maiores quia quasi ea vitae ullam sequi culpa voluptatum ipsam odio!
+        .grid.make-gutters
+          .column
+            span.tag Tag
+          .column
+            .sticker
+              code.
+                &lt;span class="<strong>tag</strong>"&gt;Tag&lt;/span&gt;
+
+        //- TYPES
+        .grid.make-gutters
+          .column
+            .tags
+              span.tag.make-primary Primary
+              span.tag.make-info Info
+              span.tag.make-success Success
+              span.tag.make-warning Warning
+              span.tag.make-danger Danger
+              span.tag.make-light Light
+              span.tag.make-dark Dark
+          .column
+            .sticker
+              code.
+                &lt;span class="tag <strong>make-$type</strong>"&gt;Tag&lt;/span&gt;
+
+        //- REVERSED      
+        .grid.make-gutters
+          .column
+            .tags
+              span.tag.make-primary.make-reverse Primary
+              span.tag.make-info.make-reverse Info
+              span.tag.make-success.make-reverse Success
+              span.tag.make-warning.make-reverse Warning
+              span.tag.make-danger.make-reverse Danger
+              span.tag.make-light.make-reverse Light
+              span.tag.make-dark.make-reverse Dark
+          .column
+            .sticker
+              code.
+                &lt;span class="tag make-$type <strong>make-reverse</strong>"&gt;Button&lt;/span&gt;
+ 
+        //- OUTLINED      
+        .grid.make-gutters
+          .column
+            .tags
+              span.tag.make-primary.make-outline Primary
+              span.tag.make-info.make-outline Info
+              span.tag.make-success.make-outline Success
+              span.tag.make-warning.make-outline Warning
+              span.tag.make-danger.make-outline Danger
+              span.tag.make-light.make-outline Light
+              span.tag.make-dark.make-outline Dark
+          .column
+            .sticker
+              code.
+                &lt;span class="tag make-$type <strong>make-outline</strong>"&gt;Tag&lt;/span&gt;
+                
 
   //- FOOTER
   include ./layouts/footer

@@ -1,0 +1,7 @@
+mixin article(title)
+  h4 #{title}
+  article
+    if block
+      block
+    else
+      h5.make-text-italic.make-text-muted Content description coming soon.

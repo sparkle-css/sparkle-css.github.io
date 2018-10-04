@@ -1,4 +1,5 @@
 extends ./config/base
+include ./mixins/_banner
 
 block style
   link(rel="apple-touch-icon", sizes="180x180", href="images/apple-touch-icon.png")
@@ -44,22 +45,13 @@ block content
   //- MAIN
   main
     //- HERO
-    .hero.make-large.make-bg-image
-      .hero__body
-        .wrapper
-          .grid
-            .column.make-half
-              h1 Let's Get Started
-              h3 Get everything you need to get started with Sparkle!
-          .tags.make-solid.make-margin-20-top
-            span.tag.make-dark= title
-            span.tag.make-primary= docVersion
+    +banner(longTitle, subtitle)
         
     //- PROJECT
     .project
       .wrapper.make-padding-50-vertical.make-margin-30-bottom
-        h2 Getting Started
-        p.
+        h3.make-text-centered Installing the Framework
+        p.make-margin-10-bottom.
           There are many ways to import Sparkle into your development folder,
           each way being simple and easy to follow.
       
@@ -88,11 +80,11 @@ block content
           .column.make-third
             h5 Install via CDN
             p.
-                        You can also install the latest (master) release of the framework.
-                        Simply link your stylesheet and script source to the appropriate links.
-                        <br>
-                        <strong>Note:</strong> If you wish to install the latest developmental
-                        version of Sparkle, just replace the version number with <code>@latest</code>.
+              You can also install the latest (master) release of the framework.
+              Simply link your stylesheet and script source to the appropriate links.
+              <br>
+              <strong>Note:</strong> If you wish to install the latest developmental
+              version of Sparkle, just replace the version number with <code>@latest</code>.
             .sticker
               code= `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jdriviere/sparkle-css@${version}/dist/css/sparkle.min.css">`
           .column.make-third

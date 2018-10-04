@@ -1,4 +1,6 @@
 extends ./config/base
+include ./mixins/_article
+include ./mixins/_banner
 
 block style
   link(rel="apple-touch-icon", sizes="180x180", href="../images/apple-touch-icon.png")
@@ -44,18 +46,12 @@ block content
   //- MAIN
   main
     //- HERO
-    .hero.make-large.make-bg-image
-      .hero__body
-        .wrapper
-          h1 #{title}
-          h3 #{subtitle}
-          .tags.make-solid
-            span.tag.make-dark= title
-            span.tag.make-primary= docVersion
+    +banner(title, subtitle)
   
     //- PROJECT
     .project
       .wrapper.make-padding-50-vertical.make-margin-30-bottom
+        +article("Lorem Ipsum")
 
   //- FOOTER
   include ./layouts/footer

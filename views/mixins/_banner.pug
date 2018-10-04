@@ -1,0 +1,11 @@
+mixin banner(title, subtitle)
+  .hero.make-large.make-bg-image
+    .hero__body
+      .wrapper
+        .grid
+          .column.make-half
+            h1 #{title}
+            h3 #{subtitle}
+        .tags.make-solid.make-margin-20-top
+          span.tag.make-dark #{title}
+          span.tag.make-primary #{docVersion}

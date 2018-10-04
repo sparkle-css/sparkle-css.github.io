@@ -1,19 +1,33 @@
 var express = require('express');
 var router = express.Router();
 
+const version = '1.10.0';
+const docVersion = '0.1.0';
+
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'sparkle.css' });
+  res.render('index', {
+    title: 'sparkle.css',
+    subtitle: 'A lightweight, open-source, mobile-first CSS framework for easy website designs.',
+    version: version
+  });
 });
 
 /* GET home's GETTING STARTED page. */
 router.get('/get-started', function(req, res) {
-  res.render('get-started', { title: 'Get Started' });
+  res.render('get-started', {
+    title: 'Get Started',
+    longTitle: "Let's Get Started",
+    subtitle: 'Get everything you need to get started with Sparkle!'
+  });
 });
 
 /* Get documentation's HOME page. */
 router.get('/documentation', function(req, res) {
-  res.render('documentation', { title: 'Documentation' });
+  res.render('documentation', {
+    title: 'Documentation',
+    subtitle: 'Navigate through the various elements that make up the framework, and get the information you need to style your website.'
+  });
 });
 
 /* GET documentation's COMPONENTS page. */

@@ -1,4 +1,5 @@
 extends ./config/base
+include ./mixins/_banner
 
 block style
   link(rel="apple-touch-icon", sizes="180x180", href="images/apple-touch-icon.png")
@@ -44,16 +45,7 @@ block content
   //- MAIN
   main
     //- HERO
-    .hero.make-large.make-bg-image
-      .hero__body
-        .wrapper
-          .grid
-            .column.make-half
-              h1 Documentation
-              h3 Navigate through the various elements that make up the framework, and get the information you need.
-          .tags.make-solid.make-margin-20-top
-            span.tag.make-dark= title
-            span.tag.make-primary= docVersion
+    +banner(title, subtitle)
   
     //- PROJECT
     .project

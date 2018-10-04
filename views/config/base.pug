@@ -19,6 +19,16 @@ html(lang="en")
       title Sparkle | Home
     else
       title= `Sparkle | ${title}`
+    
+    //- SCRIPTS
+    //- === Google Analytics === //
+    script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-126960684-1")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'UA-126960684-1');
+
   body
     -var version = '1.10.0';
     block content

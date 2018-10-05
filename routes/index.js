@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
+
 const pkg = require('../package.json');
-
 const sparkle = pkg.dependencies["sparkle.css"];
-
 const version = sparkle;
+
 const docVersion = '0.1.0';
 
 /* GET home page. */
@@ -21,7 +21,8 @@ router.get('/get-started', function(req, res) {
   res.render('get-started', {
     title: 'Get Started',
     longTitle: "Let's Get Started",
-    subtitle: 'Get everything you need to get started with Sparkle!'
+    subtitle: 'Get everything you need to get started with Sparkle!',
+    version: version
   });
 });
 
@@ -29,7 +30,8 @@ router.get('/get-started', function(req, res) {
 router.get('/documentation', function(req, res) {
   res.render('documentation', {
     title: 'Documentation',
-    subtitle: 'Navigate through the various elements that make up the framework, and get the information you need to style your website.'
+    subtitle: 'Navigate through the various elements that make up the framework, and get the information you need to style your website.',
+    version: version
   });
 });
 
@@ -37,7 +39,8 @@ router.get('/documentation', function(req, res) {
 router.get('/documentation/components', function(req, res) {
   res.render('components', {
     title: 'Components',
-    subtitle: 'The building blocks of the framework.'
+    subtitle: 'The building blocks of the framework.',
+    version: version
   });
 });
 
@@ -45,7 +48,8 @@ router.get('/documentation/components', function(req, res) {
 router.get('/documentation/forms', function(req, res) {
   res.render('forms', {
     title: 'Forms',
-    subtitle: 'The elements essential to style a clean form UI.'
+    subtitle: 'The elements essential to style a clean form UI.',
+    version: version
   });
 });
 
@@ -53,7 +57,8 @@ router.get('/documentation/forms', function(req, res) {
 router.get('/documentation/layouts', function(req, res) {
   res.render('layouts', {
     title: 'Layouts',
-    subtitle: 'The overall structural flow of the page.'
+    subtitle: 'The overall structural flow of the page.',
+    version: version
   });
 });
 
@@ -61,7 +66,8 @@ router.get('/documentation/layouts', function(req, res) {
 router.get('/documentation/utilities', function(req, res) {
   res.render('utilities', {
     title: 'Utilities',
-    subtitle: 'The additional functionalities for optimum designs.'
+    subtitle: 'The additional functionalities for optimum designs.',
+    version: version
   });
 });
 

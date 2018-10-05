@@ -1,6 +1,7 @@
-mixin article(title)
-  h4 #{title}
-  article
+mixin article(component)
+  h3 #{component}
+  hr.line
+  article(id=`#${component}`, class="box make-margin-20-bottom")
     if block
       block
     else

@@ -8,7 +8,8 @@ block style
   link(rel="icon", type="image/png", sizes="16x16", href="../images/favicon-16x16.png")
   link(rel="manifest", href="../images/site.webmanifest")
   link(rel="mask-icon", href="../images/safari-pinned-tab.svg", color="#add2e6")
-  link(rel="stylesheet", type="text/css" href="https://cdn.jsdelivr.net/gh/jdriviere/sparkle-css@1.9.14/dist/css/sparkle.min.css")
+  link(rel="stylesheet", type="text/css" href="https://cdn.jsdelivr.net/gh/jdriviere/sparkle-css@2.1.0/dist/css/sparkle.min.css")
+  link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.3/css/fork-awesome.min.css", integrity="sha256-ZhApazu+kejqTYhMF+1DzNKjIzP7KXu6AzyXcC1gMus=", crossorigin="anonymous")
   link(rel="stylesheet", type="text/css" href="../stylesheets/main.css")
   link(rel="stylesheet", type="text/css" href="../stylesheets/sticker.css")
 
@@ -57,13 +58,11 @@ block content
       .wrapper.make-padding-50-vertical.make-margin-30-bottom
         //--- ALERTS ---//
         +article("Alerts")
-          //- Snippet
-          .grid.make-gutters
-            //- Example
+          //- DEFAULT
+          .columns
             .column
               .alert
                 p This is a <strong>default</strong> alert.
-            //- Code
             .column
               .sticker
                 code.
@@ -72,7 +71,7 @@ block content
                   &lt;/div&gt;<br>
 
           //- TYPES
-          .grid.make-gutters
+          .columns
             .column
               each value in types
                 div(class=`alert make-${value}`)
@@ -86,8 +85,8 @@ block content
         
         //--- BLOCKQUOTES ---//
         +article("Blockquotes")
-          //- Snippet
-          .grid.make-gutters
+          //- DEFAULT
+          .columns
             .column
               .blockquote
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, commodi?
@@ -104,9 +103,8 @@ block content
 
         //--- BUTTONS ---//
         +article("Buttons")
-          //- Snippets
-          .grid.make-gutters
-            //- Examples
+          //- DEFAULTS
+          .columns
             .column
               .buttons
                 .button Div
@@ -115,7 +113,6 @@ block content
                 input.button(type="button", value="Button")
                 input.button(type="submit", value="Submit")
                 input.button(type="reset", value="Reset")
-            //- Code
             .column
               .sticker
                 code.
@@ -127,8 +124,8 @@ block content
                   &lt;input type="reset" class="<strong>button</strong>" value="Button"&gt;
 
           //- TYPES
-          .grid.make-gutters
-            .column         
+          .columns
+            .column
               .buttons
                 each value in types
                   button(class=`button make-${value}`) #{value}
@@ -138,7 +135,7 @@ block content
                   &lt;button class="button <strong>make-$type</strong>"&gt;Button&lt;/button&gt;<br>
 
           //- REVERSED
-          .grid.make-gutters
+          .columns
             .column
               .buttons
                 each value in types
@@ -149,7 +146,7 @@ block content
                   &lt;button class="button make-$type <strong>make-reverse</strong>"&gt;Button&lt;/button&gt;<br>
   
           //- OUTLINED
-          .grid.make-gutters
+          .columns
             .column
               .buttons
                 each value in types
@@ -160,7 +157,7 @@ block content
                   &lt;button class="button make-$type <strong>make-outline</strong>"&gt;Button&lt;/button&gt;<br>
                   
           //- REVERSED OUTLINED
-          .grid.make-gutters
+          .columns
             .column
               .buttons
                 each value in types
@@ -171,7 +168,7 @@ block content
                   &lt;button class="button make-$type <strong>make-outline make-reverse</strong>"&gt;Button&lt;/button&gt;<br>
                   
           //- LINKED
-          .grid.make-gutters
+          .columns
             .column
               .buttons
                 each value in types
@@ -182,7 +179,7 @@ block content
                   &lt;button class="button make-$type <strong>make-link</strong>"&gt;Button&lt;/button&gt;<br>
                   
           //- SIZES
-          .grid.make-gutters
+          .columns
             .column
               .buttons
                 each size in sizes
@@ -196,7 +193,7 @@ block content
                   &lt;button class="button <strong>make-$size</strong>"&gt;Button&lt;/button&gt;<br>
                   
           //- BLOCK 
-          .grid.make-gutters
+          .columns
             .column
               button.button.make-block Block
             .column
@@ -205,7 +202,7 @@ block content
                   &lt;button class="button <strong>make-block</strong>"&gt;Button&lt;/button&gt;<br>
                   
           //- ROUNDNESS   
-          .grid.make-gutters
+          .columns
             .column
               .buttons
                 each round in roundness
@@ -217,8 +214,8 @@ block content
                   
         //--- LOADERS ---//
         +article("Loaders")
-          //- Snippet
-          .grid.make-gutters
+          //- DEFAULT
+          .columns
             .column
               .button.make-dark
                 .loader
@@ -228,7 +225,7 @@ block content
                   &lt;div class="<strong>loader</strong>"&gt;&lt;/div&gt;
         
           //- TYPES
-          .grid.make-gutters
+          .columns
             -var types = ['primary', 'info', 'success', 'warning', 'danger', 'light', 'dark'];
             .column
               .buttons
@@ -245,7 +242,7 @@ block content
                   &lt;div class="loader <strong>make-$type</strong>"&gt;&lt;/div&gt;
         
           //- SIZES
-          .grid.make-gutters
+          .columns
             .column
               .buttons
                 .button.make-dark
@@ -261,8 +258,8 @@ block content
 
         //--- TAGS ---//
         +article("Tags")
-          //- Snippet
-          .grid.make-gutters
+          //- DEFAULT
+          .columns
             .column
               span.tag Tag
             .column
@@ -271,7 +268,7 @@ block content
                   &lt;span class="<strong>tag</strong>"&gt;Tag&lt;/span&gt;
 
           //- TYPES
-          .grid.make-gutters
+          .columns
             .column
               .tags
                 span.tag.make-primary Primary
@@ -287,7 +284,7 @@ block content
                   &lt;span class="tag <strong>make-$type</strong>"&gt;Tag&lt;/span&gt;
           
           //- REVERSED      
-          .grid.make-gutters
+          .columns
             .column
               .tags
                 each value in types
@@ -298,7 +295,7 @@ block content
                   &lt;span class="tag make-$type <strong>make-reverse</strong>"&gt;Tag&lt;/span&gt;
                   
           //- OUTLINED      
-          .grid.make-gutters
+          .columns
             .column
               .tags
                 each value in types
@@ -309,14 +306,13 @@ block content
                   &lt;span class="tag make-$type <strong>make-outline</strong>"&gt;Tag&lt;/span&gt;
                   
           //- ROUNDNESS      
-          .grid.make-gutters
+          .columns
             .column
               span.tag.make-bullet bullet
             .column
               .sticker
                 code.
                   &lt;span class="tag <strong>make-bullet</strong>"&gt;Tag&lt;/span&gt;
-                  
 
   //- FOOTER
   include ./layouts/footer

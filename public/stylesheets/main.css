@@ -18,6 +18,15 @@
     transition: all 0.2s ease-in;
     cursor: pointer; }
 
+/* LINES */
+.line {
+  width: 100%;
+  height: 0;
+  margin-bottom: 2.0rem;
+  appearance: none;
+  border: none;
+  border-top: 1px solid #ABABAC; }
+
 /* LINKS (EXTRA STYLES) */
 .make-unstyled,
 .make-unstyled li {
@@ -26,8 +35,10 @@
   list-style: none; }
   .make-unstyled a,
   .make-unstyled li a {
-    color: #414141;
-    color: #000; }
+    color: #414141; }
+    .make-unstyled a:hover,
+    .make-unstyled li a:hover {
+      color: #000; }
 
 /* BACKGROUNDS */
 .make-bg-image {

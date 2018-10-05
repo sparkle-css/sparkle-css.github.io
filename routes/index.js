@@ -1,7 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const pkg = require('../package.json');
 
-const version = '1.10.0';
+const sparkle = pkg.dependencies["sparkle.css"];
+
+const version = sparkle;
 const docVersion = '0.1.0';
 
 /* GET home page. */
@@ -32,22 +35,34 @@ router.get('/documentation', function(req, res) {
 
 /* GET documentation's COMPONENTS page. */
 router.get('/documentation/components', function(req, res) {
-  res.render('components', { title: 'Components', subtitle: 'The building blocks of the framework.' });
+  res.render('components', {
+    title: 'Components',
+    subtitle: 'The building blocks of the framework.'
+  });
 });
 
 /* GET documentation's LAYOUTS page. */
 router.get('/documentation/forms', function(req, res) {
-  res.render('forms', { title: 'Forms', subtitle: 'The elements essential to style a clean form UI.' });
+  res.render('forms', {
+    title: 'Forms',
+    subtitle: 'The elements essential to style a clean form UI.'
+  });
 });
 
 /* GET documentation's LAYOUTS page. */
 router.get('/documentation/layouts', function(req, res) {
-  res.render('layouts', { title: 'Layouts', subtitle: 'The overall structural flow of the page.' });
+  res.render('layouts', {
+    title: 'Layouts',
+    subtitle: 'The overall structural flow of the page.'
+  });
 });
 
 /* GET documentation's UTILITIES page. */
 router.get('/documentation/utilities', function(req, res) {
-  res.render('utilities', { title: 'Utilities', subtitle: 'The additional functionalities for optimum designs.' });
+  res.render('utilities', {
+    title: 'Utilities',
+    subtitle: 'The additional functionalities for optimum designs.'
+  });
 });
 
 module.exports = router;

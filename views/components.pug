@@ -196,7 +196,6 @@ block content
         
           //- TYPES
           .columns
-            -var types = ['primary', 'info', 'success', 'warning', 'danger', 'light', 'dark'];
             .column
               .buttons
                 each value in types
@@ -241,13 +240,8 @@ block content
           .columns
             .column
               .tags
-                span.tag.make-primary Primary
-                span.tag.make-info Info
-                span.tag.make-success Success
-                span.tag.make-warning Warning
-                span.tag.make-danger Danger
-                span.tag.make-light Light
-                span.tag.make-dark Dark
+                each value in types
+                  span(class=`tag make-${value}`) #{value}
             .column
               .sticker
                 code.

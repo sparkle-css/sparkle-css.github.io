@@ -28,6 +28,11 @@ app.use(sassMiddleware({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Allow pretty HTML format for dev environment
+if (app.get('env') === 'development') {
+  app.locals.pretty = true;
+} // End of IF
+
 // Use routes
 app.use('/', indexRouter);
 

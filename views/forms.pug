@@ -193,9 +193,9 @@ block content
           //- DEFAULT
           .columns
             .column
-              label.label Label
-              input(type="text", placeholder="input").input
-              select.select
+              label.label.make-margin-15-bottom Label
+              input(type="text", placeholder="input").input.make-margin-15-bottom
+              select.select.make-margin-15-bottom
                 option(name="select", selected, disabled) Selection...
                 option(name="select", value="A") Option A
                 option(name="select", value="B") Option B
@@ -216,8 +216,8 @@ block content
           //- STYLES
           .columns
             .column
-              input(type="text", placeholder="input").input.make-success
-              select.select.make-warning
+              input(type="text", placeholder="input").input.make-success.make-margin-15-bottom
+              select.select.make-warning.make-margin-15-bottom
                 option(name="select", selected, disabled) Selection...
                 option(name="select", value="A") Option A
                 option(name="select", value="B") Option B
@@ -237,8 +237,8 @@ block content
           //- STATES
           .columns
             .column
-              input(type="text", placeholder="Disabled input", disabled).input
-              select(disabled).select
+              input(type="text", placeholder="Disabled input", disabled).input.make-margin-15-bottom
+              select(disabled).select.make-margin-15-bottom
                 option(name="select", selected, disabled) Disabled selection...
                 option(name="select", value="A") Option A
                 option(name="select", value="B") Option B
@@ -271,38 +271,38 @@ block content
                   &nbsp;&nbsp;&lt;input class="input [make-$type] [placeholder=""]&gt;<br>
                   &lt;/div&gt;
   
-        //- FORM GROUPS
-        +article("Form Groups")
+        //--- INPUT ADDONS ---//
+        +article("Input Addons")
           //- DEFAULT
           .columns
             .column
               //- Prepend
-              .form-group
+              .input__addons.make-margin-15-bottom
                 button.button Button
                 input(type="text", placeholder="Input...").input
               //- Append
-              .form-group
+              .input__addons.make-margin-15-bottom
                 input(type="text", placeholder="Input...").input
                 button.button Button
               //- Append and Prepend
-              .form-group
+              .input__addons.make-margin-15-bottom
                 button.button Button
                 input(type="text", placeholder="Input...").input
                 button.button Button
             .column
               .sticker
                 code.
-                  &lt;div class="<strong>form-group</strong>"&gt;<br>
+                  &lt;div class="<strong>input__addons</strong>"&gt;<br>
                   &nbsp;&nbsp;&lt;button class="button [make-$type]"&gt;Button&lt;/button&gt;<br>
                   &nbsp;&nbsp;&lt;input class="input [make-$type] [placeholder=""]&gt;<br>
                   &lt;/div&gt;<br>
                   <br>
-                  &lt;div class="<strong>form-group</strong>"&gt;<br>
+                  &lt;div class="<strong>input__addons</strong>"&gt;<br>
                   &nbsp;&nbsp;&lt;input class="input [make-$type] [placeholder=""]&gt;<br>
                   &nbsp;&nbsp;&lt;button class="button [make-$type]"&gt;Button&lt;/button&gt;<br>
                   &lt;/div&gt;<br>
                   <br>
-                  &lt;div class="<strong>form-group</strong>"&gt;<br>
+                  &lt;div class="<strong>input__addons</strong>"&gt;<br>
                   &nbsp;&nbsp;&lt;button class="button [make-$type]"&gt;Button&lt;/button&gt;<br>
                   &nbsp;&nbsp;&lt;input class="input [make-$type] [placeholder=""]&gt;<br>
                   &nbsp;&nbsp;&lt;button class="button [make-$type]"&gt;Button&lt;/button&gt;<br>

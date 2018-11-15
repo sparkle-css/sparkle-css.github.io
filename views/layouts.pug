@@ -23,7 +23,285 @@ block content
     //- PROJECT
     .project
       .wrapper.make-padding-50-vertical.make-margin-30-bottom
-        +article("Lorem Ipsum")
+        //--- BREADCRUMBS ---//
+        +article("Breadcrumbs")
+          .columns
+            .column
+              ul.breadcrumb
+                li.breadcrumb__item
+                  a(href="#") Lorem
+                li.breadcrumb__item
+                  a(href="#") Ipsum
+                li.breadcrumb__item.make-active
+                  p Dolor
+            .column
+              .sticker
+                code.
+                  &lt;ul class="<strong>breadcrumb</strong>"&gt;<br>
+                  &nbsp;&nbsp;&lt;li class="<strong>breadcrumb__item</strong>"&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                  &nbsp;&nbsp;&lt;li class="<strong>breadcrumb__item</strong>"&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                  &nbsp;&nbsp;&lt;li class="breadcrumb__item <strong>make-active</strong>"&gt;&lt;p&gt;Active Link&lt;/p&gt;&lt;/li&gt;<br>
+                  &lt;/ul&gt;
+
+        //--- CARDS ---//
+        +article("Cards")
+          //- DEFAULT (JUST BODY)
+          .columns
+            .column
+              .card
+                .card__body
+                  p This is a card without header or footer.
+            .column
+              .sticker
+                code.
+                  &lt;div class="<strong>card</strong>"&gt;<br>
+                  &nbsp;&nbsp;// Body of element<br>
+                  &lt;/div&gt;
+          
+          //- WITH HEADER AND BODY
+          .columns
+            .column
+              .card
+                .card__header
+                  .card__title Title
+                  .card__subtitle Subitle
+                .card__body
+                  p This is a card with a header and a body, but no footer.
+            .column
+              .sticker
+                code.
+                  &lt;div class="card"&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="<strong>card__header</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>card__title</strong>"&gt;Title&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>card__subtitle</strong>"&gt;Subitle&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="<strong>card__body</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;// Body of element<br>
+                  &nbsp;&nbsp;&lt;/div&gt;<br>
+                  &lt;/div&gt;
+    
+          //- WITH HEADER AND FOOTER (ITEMS)
+          .columns
+            .column
+              .card
+                .card__header
+                  .card__title Title
+                  .card__subtitle Subitle
+                .card__body
+                  p This is a card with a header, body, and footer, with footer items.
+                .card__footer
+                  .card__footer__item
+                    p Footer item
+                  .card__footer__item
+                    p Footer item
+                  .card__footer__item
+                    p Footer item
+            .column
+              .sticker
+                code.
+                  &lt;div class="card"&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="card__header"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="card__title"&gt;Title&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="card__subtitle"&gt;Subitle&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="card__body"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;// Body of element<br>
+                  &nbsp;&nbsp;&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="<strong>card__footer</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>card__footer__item</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Body of element<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>card__footer__item</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Body of element<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;/div&gt;<br>
+                  &lt;/div&gt;
+
+          //- SHADOW
+          .columns
+            .column
+              .card.make-shadows
+                .card__body
+                  p This is a default card with shadows.
+            .column
+              .sticker
+                code.
+                  &lt;div class="card <strong>make-shadows</strong>"&gt;<br>
+                  &nbsp;&nbsp;// Body of element<br>
+                  &lt;/div&gt;
+          
+          //- HOVERABLE
+          .columns
+            .column
+              .card.make-hoverable
+                .card__body
+                  p This is a default card with hoverable effect.
+            .column
+              .sticker
+                code.
+                  &lt;div class="card <strong>make-hoverable</strong>"&gt;<br>
+                  &nbsp;&nbsp;// Body of element<br>
+                  &lt;/div&gt;
+
+        //--- CONTAINER ---//
+        +article("Container")
+
+        //--- GRID ---//
+        +article("Grid")
+
+        //--- HEROES ---//
+        +article("Heroes")
+
+        //--- MEDIA ---//
+        +article("Media")
+          .columns
+            .column
+              .media
+                .media__profile
+                  img(src="https://via.placeholder.com/64", alt="Media profile")
+                .media__body
+                  p.media__title John Smith
+                  p.media__subtitle @jsmith
+                  p.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Blanditiis, illum. Quos officia odit similique impedit
+                    nobis, debitis maxime alias eius.
+            .column
+              .sticker
+                code.
+                  &lt;div class="<strong>media</strong>"&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="<strong>media__profile</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="#" alt="#"&gt;<br>
+                  &nbsp;&nbsp;&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="<strong>media__body</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="<strong>media__title</strong>"&gt;John Smith&lt;/p&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="<strong>media__subtitle</strong>"&gt;@jsmith&lt;/p&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;// Body of element<br>
+                  &nbsp;&nbsp;&lt;/div&gt;<br>
+                  &lt;/div&gt;
+
+        //--- MENU ---//
+        +article("Menu")
+
+        //--- NAVBAR ---//
+        +article("Navigation")
+
+        //--- TABLES ---//
+        +article("Tables")
+          //- DEFAULT
+          .columns
+            .column
+              table.table
+                caption Table using &lt;table&gt;
+                thead
+                  tr
+                    th Name
+                    th ID
+                    th Profession
+                tbody
+                  tr
+                    td John Doe
+                    td 1234
+                    td Web Developer, UX Designer
+                  tr
+                    td Suzan Moore
+                    td ABCD
+                    td Professional Speaker, Advertiser
+                tfoot
+                  tr
+                    th Name
+                    th ID
+                    th Profession
+            .column
+              .sticker
+                code.
+                  &lt;table class="<strong>table</strong>"&gt;<br>
+                  &nbsp;&nbsp;&lt;caption&gt;Table using TABLE&lt;/caption&gt;<br>
+                  &nbsp;&nbsp;&lt;thead&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Name&lt;/th&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;ID&lt;/th&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Profession&lt;/th&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                  &nbsp;&nbsp;&lt;/thead&gt;<br>
+                  &nbsp;&nbsp;&lt;tbody&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;John Doe&lt;/td&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;1234&lt;/td&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Web Developer, UX Designer&lt;/td&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Suzan Moore&lt;/td&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;ABCD&lt;/td&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Professional Speaker, Advertiser&lt;/td&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                  &nbsp;&nbsp;&lt;/tbody&gt;<br>
+                  &nbsp;&nbsp;&lt;tfoot&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Name&lt;/th&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;ID&lt;/th&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Profession&lt;/th&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                  &nbsp;&nbsp;&lt;/tfoot&gt;<br>
+                  &lt;/table&gt;
+            
+          //- DIVS
+          .columns
+            .column
+              .table
+                .table__caption Table using &lt;div&gt;
+                .table__header
+                  .table__row
+                    .table__cell Name
+                    .table__cell ID
+                    .table__cell Profession
+                .table__body
+                  .table__row
+                    .table__cell John Doe
+                    .table__cell 1234
+                    .table__cell Web Developer, UX Designer
+                  .table__row
+                    .table__cell Suzan Moore
+                    .table__cell ABCD
+                    .table__cell Professional Speaker, Advertiser
+                .table__footer
+                  .table__row
+                    .table__cell Name
+                    .table__cell ID
+                    .table__cell Profession
+            .column
+              .sticker
+                code.
+                  &lt;div class="<strong>table</strong>"&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="<strong>table__caption</strong>"&gt;Table using DIV&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="<strong>table__header</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__row</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;Name&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;ID&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;Profession&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="<strong>table__body</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__row</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;John Doe&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;1234&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;Web Developer, UX Designer&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__row</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;Suzan Moore&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;ABCD&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;Professional Speaker, Advertiser&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="<strong>table__footer</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__row</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;Name&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;ID&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;Profession&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;/div&gt;<br>
+                  &lt;/div&gt;
 
   //- FOOTER
   include ./layouts/footer

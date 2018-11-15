@@ -69,7 +69,33 @@ block content
                   &nbsp;&nbsp;&lt;footer class="<strong>blockquote__footer</strong>"&gt;<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;// Body of footer<br>
                   &nbsp;&nbsp;&lt;/footer&gt;<br>
-                  &lt;/blockquote&gt;<br>
+                  &lt;/blockquote&gt;
+        
+        //--- BOXES ---//
+        +article("Box")
+          //- DEFAULT
+          .columns
+            .column
+              .box
+                p This is a regular box element.
+            .column
+              .sticker
+                code.
+                  &lt;div class="<strong>box</strong>"&gt;<br>
+                  &nbsp;&nbsp;// Body of element<br>
+                  &lt;/div&gt;
+          
+          //- LINK
+          .columns
+            .column
+              a.box
+                p This is a link box element.
+            .column
+              .sticker
+                code.
+                  &lt;a <strong>href="#"</strong> class="box"&gt;<br>
+                  &nbsp;&nbsp;// Body of element<br>
+                  &lt;/div&gt;
 
         //--- BUTTONS ---//
         +article("Buttons")

@@ -5,19 +5,6 @@
   padding-bottom: 5.0rem;
   box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2); }
 
-/* BOX */
-.box {
-  padding: 2.0rem;
-  background: #F4F4F8;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
-  transition: all 0.2s ease-in; }
-  .box:hover {
-    background: #FFF;
-    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
-    transition: all 0.2s ease-in;
-    cursor: pointer; }
-
 /* LINES */
 .line {
   width: 100%;
@@ -58,6 +45,10 @@
       color: #f4f4f8 !important; }
 
 /* SPARKLE  ADD-ONS */
+.box img {
+  width: 80px;
+  margin: 0 auto; }
+
 .button i:first-child:not(:last-child) {
   margin-right: 10px; }
 

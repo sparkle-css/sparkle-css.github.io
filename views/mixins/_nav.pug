@@ -2,49 +2,49 @@
 mixin nav(title)
   header
     nav.nav.make-fixed
-      input(type="checkbox")#nav__trigger
-      label.nav__toggle(for="nav__trigger")
+      input(type="checkbox")#nav-trigger
+      label.nav-toggle(for="nav-trigger")
       
       if title == "Get Started"
-        .nav__brand
+        .nav-brand
           img(src="images/icon.png", alt="Sparkle.CSS logo")
-        ul.nav__menu
-          li.nav__menu__item
+        ul.nav-menu
+          li.nav-menu-item
             a(href="/") Home
-          li.nav__menu__item.make-active
+          li.nav-menu-item.make-active
             a(href="/get-started") Get Started
-          li.nav__menu__item
+          li.nav-menu-item
             a(href="/documentation") Documentation
       else if title == "Documentation"
-        .nav__brand
+        .nav-brand
           img(src="images/icon.png", alt="Sparkle.CSS logo")
-        ul.nav__menu
-          li.nav__menu__item
+        ul.nav-menu
+          li.nav-menu-item
             a(href="/") Home
-          li.nav__menu__item
+          li.nav-menu-item
             a(href="/get-started") Get Started
-          li.nav__menu__item.make-active
+          li.nav-menu-item.make-active
             a(href="/documentation") Documentation
       else if title == "Components" || title == "Forms" || title == "Layouts" || title == "Utilities"
-        .nav__brand
+        .nav-brand
           img(src="../images/icon.png", alt="Sparkle.CSS logo")
-        ul.nav__menu
-          li.nav__menu__item
+        ul.nav-menu
+          li.nav-menu-item
             a(href="/") Home
-          li.nav__menu__item
+          li.nav-menu-item
             a(href="/get-started") Get Started
-          li.nav__menu__item.make-active
+          li.nav-menu-item.make-active
             a(href="/documentation") Documentation
 
       //- NAV MENU (RIGHT)
-      ul.nav__menu.make-right
-        li.nav__menu__item.make-tablet-hidden
+      ul.nav-menu.make-right
+        li.nav-menu-item.make-tablet-hidden
           a(href=`https://github.com/jdriviere/sparkle-css/archive/v${version}.zip`).button.make-dark.make-outline.make-block Download
-        li.nav__menu__item.make-tablet-hidden
+        li.nav-menu-item.make-tablet-hidden
           a(href="https://github.com/jdriviere/sparkle-css", target="_blank").button.make-primary.make-block Github
-        li.nav__menu__item.make-phone-hidden
+        li.nav-menu-item.make-phone-hidden
           a(href=`https://github.com/jdriviere/sparkle-css/archive/v${version}.zip`)
             i.fa.fa-download
-        li.nav__menu__item.make-phone-hidden
+        li.nav-menu-item.make-phone-hidden
           a(href="https://github.com/jdriviere/sparkle-css", target="_blank")
             i.fa.fa-github

@@ -28,19 +28,19 @@ block content
           .columns
             .column
               ul.breadcrumb
-                li.breadcrumb__item
+                li.breadcrumb-item
                   a(href="#") Lorem
-                li.breadcrumb__item
+                li.breadcrumb-item
                   a(href="#") Ipsum
-                li.breadcrumb__item.make-active
+                li.breadcrumb-item.make-active
                   p Dolor
             .column
               .sticker
                 code.
                   &lt;ul class="<strong>breadcrumb</strong>"&gt;<br>
-                  &nbsp;&nbsp;&lt;li class="<strong>breadcrumb__item</strong>"&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
-                  &nbsp;&nbsp;&lt;li class="<strong>breadcrumb__item</strong>"&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
-                  &nbsp;&nbsp;&lt;li class="breadcrumb__item <strong>make-active</strong>"&gt;&lt;p&gt;Active Link&lt;/p&gt;&lt;/li&gt;<br>
+                  &nbsp;&nbsp;&lt;li class="<strong>breadcrumb-item</strong>"&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                  &nbsp;&nbsp;&lt;li class="<strong>breadcrumb-item</strong>"&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;<br>
+                  &nbsp;&nbsp;&lt;li class="breadcrumb-item <strong>make-active</strong>"&gt;&lt;p&gt;Active Link&lt;/p&gt;&lt;/li&gt;<br>
                   &lt;/ul&gt;
 
         //--- CARDS ---//
@@ -49,7 +49,7 @@ block content
           .columns
             .column
               .card
-                .card__body
+                .card-body
                   p This is a card without header or footer.
             .column
               .sticker
@@ -62,20 +62,18 @@ block content
           .columns
             .column
               .card
-                .card__header
-                  .card__title Title
-                  .card__subtitle Subitle
-                .card__body
-                  p This is a card with a header and a body, but no footer.
+                .card-header
+                  p This is the Card Header
+                .card-body
+                  p This is the Card Body.
             .column
               .sticker
                 code.
                   &lt;div class="card"&gt;<br>
-                  &nbsp;&nbsp;&lt;div class="<strong>card__header</strong>"&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>card__title</strong>"&gt;Title&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>card__subtitle</strong>"&gt;Subitle&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="<strong>card-header</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;// Body of element<br>
                   &nbsp;&nbsp;&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&lt;div class="<strong>card__body</strong>"&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="<strong>card-body</strong>"&gt;<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;// Body of element<br>
                   &nbsp;&nbsp;&lt;/div&gt;<br>
                   &lt;/div&gt;
@@ -84,64 +82,29 @@ block content
           .columns
             .column
               .card
-                .card__header
-                  .card__title Title
-                  .card__subtitle Subitle
-                .card__body
-                  p This is a card with a header, body, and footer, with footer items.
-                .card__footer
-                  .card__footer__item
-                    p Footer item
-                  .card__footer__item
-                    p Footer item
-                  .card__footer__item
-                    p Footer item
+                .card-header
+                  p This is the Card Header.
+                .card-separator
+                .card-body
+                  p This is the Card Body with a Card Separators.
+                .card-separator
+                .card-footer
+                  p This is the Card Footer.
             .column
               .sticker
                 code.
                   &lt;div class="card"&gt;<br>
-                  &nbsp;&nbsp;&lt;div class="card__header"&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="card__title"&gt;Title&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="card__subtitle"&gt;Subitle&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&lt;div class="card__body"&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="card-header"&gt;<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;// Body of element<br>
                   &nbsp;&nbsp;&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&lt;div class="<strong>card__footer</strong>"&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>card__footer__item</strong>"&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Body of element<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;...<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>card__footer__item</strong>"&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Body of element<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="<strong>card-separator</strong>"&gt;&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="card-body"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;// Body of element<br>
                   &nbsp;&nbsp;&lt;/div&gt;<br>
-                  &lt;/div&gt;
-
-          //- SHADOW
-          .columns
-            .column
-              .card.make-shadows
-                .card__body
-                  p This is a default card with shadows.
-            .column
-              .sticker
-                code.
-                  &lt;div class="card <strong>make-shadows</strong>"&gt;<br>
-                  &nbsp;&nbsp;// Body of element<br>
-                  &lt;/div&gt;
-          
-          //- HOVERABLE
-          .columns
-            .column
-              .card.make-hoverable
-                .card__body
-                  p This is a default card with hoverable effect.
-            .column
-              .sticker
-                code.
-                  &lt;div class="card <strong>make-hoverable</strong>"&gt;<br>
-                  &nbsp;&nbsp;// Body of element<br>
+                  &nbsp;&nbsp;&lt;div class="<strong>card-separator</strong>"&gt;&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="card-footer"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;// Body of element<br>
+                  &nbsp;&nbsp;&lt;/div&gt;<br>
                   &lt;/div&gt;
 
         //--- CONTAINER ---//
@@ -158,11 +121,11 @@ block content
           .columns
             .column
               .media
-                .media__profile
+                .media-profile
                   img(src="https://via.placeholder.com/64", alt="Media profile")
-                .media__body
-                  p.media__title John Smith
-                  p.media__subtitle @jsmith
+                .media-body
+                  h3 John Smith
+                  p.make-text-size5 @jsmith
                   p.
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Blanditiis, illum. Quos officia odit similique impedit
@@ -171,12 +134,10 @@ block content
               .sticker
                 code.
                   &lt;div class="<strong>media</strong>"&gt;<br>
-                  &nbsp;&nbsp;&lt;div class="<strong>media__profile</strong>"&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="<strong>media-profile</strong>"&gt;<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="#" alt="#"&gt;<br>
                   &nbsp;&nbsp;&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&lt;div class="<strong>media__body</strong>"&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="<strong>media__title</strong>"&gt;John Smith&lt;/p&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="<strong>media__subtitle</strong>"&gt;@jsmith&lt;/p&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="<strong>media-body</strong>"&gt;<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;// Body of element<br>
                   &nbsp;&nbsp;&lt;/div&gt;<br>
                   &lt;/div&gt;
@@ -250,55 +211,55 @@ block content
           .columns
             .column
               .table
-                .table__caption Table using &lt;div&gt;
-                .table__header
-                  .table__row
-                    .table__cell Name
-                    .table__cell ID
-                    .table__cell Profession
-                .table__body
-                  .table__row
-                    .table__cell John Doe
-                    .table__cell 1234
-                    .table__cell Web Developer, UX Designer
-                  .table__row
-                    .table__cell Suzan Moore
-                    .table__cell ABCD
-                    .table__cell Professional Speaker, Advertiser
-                .table__footer
-                  .table__row
-                    .table__cell Name
-                    .table__cell ID
-                    .table__cell Profession
+                .table-caption Table using &lt;div&gt;
+                .table-header
+                  .table-row
+                    .table-cell Name
+                    .table-cell ID
+                    .table-cell Profession
+                .table-body
+                  .table-row
+                    .table-cell John Doe
+                    .table-cell 1234
+                    .table-cell Web Developer, UX Designer
+                  .table-row
+                    .table-cell Suzan Moore
+                    .table-cell ABCD
+                    .table-cell Professional Speaker, Advertiser
+                .table-footer
+                  .table-row
+                    .table-cell Name
+                    .table-cell ID
+                    .table-cell Profession
             .column
               .sticker
                 code.
                   &lt;div class="<strong>table</strong>"&gt;<br>
-                  &nbsp;&nbsp;&lt;div class="<strong>table__caption</strong>"&gt;Table using DIV&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&lt;div class="<strong>table__header</strong>"&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__row</strong>"&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;Name&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;ID&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;Profession&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="<strong>table-caption</strong>"&gt;Table using DIV&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="<strong>table-header</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table-row</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table-cell</strong>"&gt;Name&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table-cell</strong>"&gt;ID&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table-cell</strong>"&gt;Profession&lt;/div&gt;<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
                   &nbsp;&nbsp;&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&lt;div class="<strong>table__body</strong>"&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__row</strong>"&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;John Doe&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;1234&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;Web Developer, UX Designer&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="<strong>table-body</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table-row</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table-cell</strong>"&gt;John Doe&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table-cell</strong>"&gt;1234&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table-cell</strong>"&gt;Web Developer, UX Designer&lt;/div&gt;<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__row</strong>"&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;Suzan Moore&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;ABCD&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;Professional Speaker, Advertiser&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table-row</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table-cell</strong>"&gt;Suzan Moore&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table-cell</strong>"&gt;ABCD&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table-cell</strong>"&gt;Professional Speaker, Advertiser&lt;/div&gt;<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
                   &nbsp;&nbsp;&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&lt;div class="<strong>table__footer</strong>"&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__row</strong>"&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;Name&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;ID&lt;/div&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table__cell</strong>"&gt;Profession&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&lt;div class="<strong>table-footer</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table-row</strong>"&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table-cell</strong>"&gt;Name&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table-cell</strong>"&gt;ID&lt;/div&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="<strong>table-cell</strong>"&gt;Profession&lt;/div&gt;<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
                   &nbsp;&nbsp;&lt;/div&gt;<br>
                   &lt;/div&gt;

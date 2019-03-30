@@ -11,7 +11,7 @@ block content
   //- Variables
   -var docVersion = 'v0.1.0';
   -var types = ['primary', 'info', 'success', 'warning', 'danger', 'light', 'dark'];
-  -var sizes = ['xsmall', 'small', '', 'large', 'xlarge'];
+  -var sizes = ['smaller', 'small', '', 'large', 'larger'];
   -var roundness = ['radial', 'round'];
 
   //- Contents
@@ -60,13 +60,13 @@ block content
             .column
               .blockquote
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, commodi?
-                .blockquote__footer Anonymous
+                .blockquote-footer Anonymous
             .column
               .sticker
                 code.
                   &lt;blockquote class="<strong>blockquote</strong>"&gt;<br>
                   &nbsp;&nbsp;// Body of element<br>
-                  &nbsp;&nbsp;&lt;footer class="<strong>blockquote__footer</strong>"&gt;<br>
+                  &nbsp;&nbsp;&lt;footer class="<strong>blockquote-footer</strong>"&gt;<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;// Body of footer<br>
                   &nbsp;&nbsp;&lt;/footer&gt;<br>
                   &lt;/blockquote&gt;
@@ -135,33 +135,33 @@ block content
             .column
               .buttons
                 each value in types
-                  button(class=`button make-${value} make-reverse`) #{value}
+                  button(class=`button make-${value} make-reversed`) #{value}
             .column
               .sticker
                 code.
-                  &lt;button class="button make-$type <strong>make-reverse</strong>"&gt;Button&lt;/button&gt;<br>
+                  &lt;button class="button make-$type <strong>make-reversed</strong>"&gt;Button&lt;/button&gt;<br>
   
           //- OUTLINED
           .columns
             .column
               .buttons
                 each value in types
-                  button(class=`button make-${value} make-outline`) #{value}
+                  button(class=`button make-${value} make-outlined`) #{value}
             .column
               .sticker
                 code.
-                  &lt;button class="button make-$type <strong>make-outline</strong>"&gt;Button&lt;/button&gt;<br>
+                  &lt;button class="button make-$type <strong>make-outlined</strong>"&gt;Button&lt;/button&gt;<br>
                   
           //- REVERSED OUTLINED
           .columns
             .column
               .buttons
                 each value in types
-                  button(class=`button make-${value} make-outline make-reverse`) #{value}
+                  button(class=`button make-${value} make-outlined make-reversed`) #{value}
             .column
               .sticker
                 code.
-                  &lt;button class="button make-$type <strong>make-outline make-reverse</strong>"&gt;Button&lt;/button&gt;<br>
+                  &lt;button class="button make-$type <strong>make-outlined make-reversed</strong>"&gt;Button&lt;/button&gt;<br>
                   
           //- LINKED
           .columns
@@ -245,11 +245,35 @@ block content
                 .button.make-dark
                   .loader.make-large
                 .button.make-dark
-                  .loader.make-xlarge
+                  .loader.make-larger
             .column
               .sticker
                 code.
                   &lt;div class="loader <strong>make-$size</strong>"&gt;&lt;/div&gt;
+
+        //--- PROGRESS BARS ---//
+        +article("Progress Bars")
+          .tags.make-solid.make-margin-30-bottom
+            span.tag New
+            span.tag.make-success v3.0.0
+          //- DEFAULT
+          .columns
+            .column
+              progress(value="30" max="100").progress
+            .column
+              .sticker
+                code.
+                  &lt;progress class="<strong>progress</strong>" [value="x" max="y"]&gt;x&lt;/progress&gt;
+          
+          //- TYPES
+          .columns
+            .column
+              each value in types
+                progress(class=`progress make-${value}`, value="30", max="100") #{value}
+            .column
+              .sticker
+                code.
+                  &lt;progress class="progress <strong>make-$type</strong>"[value="x" max="y"]&gt;x&lt;/progress&gt;
 
         //--- TAGS ---//
         +article("Tags")
@@ -278,22 +302,22 @@ block content
             .column
               .tags
                 each value in types
-                  span(class=`tag make-${value} make-reverse`) #{value}
+                  span(class=`tag make-${value} make-reversed`) #{value}
             .column
               .sticker
                 code.
-                  &lt;span class="tag make-$type <strong>make-reverse</strong>"&gt;Tag&lt;/span&gt;
+                  &lt;span class="tag make-$type <strong>make-reversed</strong>"&gt;Tag&lt;/span&gt;
                   
           //- OUTLINED      
           .columns
             .column
               .tags
                 each value in types
-                  span(class=`tag make-${value} make-outline`) #{value}
+                  span(class=`tag make-${value} make-outlined`) #{value}
             .column
               .sticker
                 code.
-                  &lt;span class="tag make-$type <strong>make-outline</strong>"&gt;Tag&lt;/span&gt;
+                  &lt;span class="tag make-$type <strong>make-outlined</strong>"&gt;Tag&lt;/span&gt;
                   
           //- ROUNDNESS      
           .columns

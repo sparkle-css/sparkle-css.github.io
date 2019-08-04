@@ -11,11 +11,11 @@
   "dependencies": {
     "cookie-parser": "^1.4.4",
     "debug": "~2.6.9",
-    "express": "^4.16.4",
+    "express": "^4.17.1",
     "http-errors": "~1.6.2",
     "morgan": "^1.9.1",
     "node-sass-middleware": "0.11.0",
-    "pug": "^2.0.3",
+    "pug": "^2.0.4",
     "sparkle.css": "3.0.0"
   }
 }
